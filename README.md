@@ -45,3 +45,13 @@ Content-Type: application/x-www-form-urlencoded
 client_id={client_id}&redirect_uri={redirect_uri}&client_secret={client_secret}
 &code={code}&grant_type=authorization_code
 ```
+
+## Onedrive endpoint
+
+https://graph.microsoft.com/v1.0/me/drive/root
+
+###
+GET /me/drives
+
+Custom Metadata
+https://docs.microsoft.com/en-us/onedrive/developer/rest-api/concepts/custom-metadata-facets?view=odsp-graph-online

@@ -21,7 +21,7 @@ https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/msa
 
 (implicit)
 ```
-GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+GET https://login.live.com/oauth20_authorize.srf
     ?client_id={client_id}
     &scope={scope}
     &response_type=token
@@ -30,7 +30,7 @@ GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 
 (auth code)
 ```
-GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+GET https://login.live.com/oauth20_authorize.srf
     ?client_id={client_id}
     &scope={scope}
     &response_type=code
@@ -39,16 +39,23 @@ GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 
 token endpoint
 ```
-POST https://login.microsoftonline.com/common/oauth2/v2.0/token
+POST https://login.live.com/oauth20_token.srf
 Content-Type: application/x-www-form-urlencoded
 
 client_id={client_id}&redirect_uri={redirect_uri}&client_secret={client_secret}
 &code={code}&grant_type=authorization_code
 ```
 
-## Onedrive endpoint
+## Endpoint differences
 
-https://graph.microsoft.com/v1.0/me/drive/root
+Authorize
+https://login.live.com/oauth20_authorize.srf
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+
+Token
+https://login.live.com/oauth20_token.srf
+https://login.microsoftonline.com/common/oauth2/v2.0/token
+
 
 ###
 GET /me/drives
